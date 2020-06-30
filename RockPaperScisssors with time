@@ -1,0 +1,45 @@
+''' Rock, paper & scissors using time as random number source for computer's thinking'''
+import time
+t = time.time_ns()
+
+x = int((t%10000)/1000)
+
+y = str(input('press 1 for rock\n'
+              'press 11 for paper\n '
+              'press 111 for scissors = '))
+
+def rpc () :
+    if x <= 3:
+        print ('rock ')
+
+        if len(y) == 2:
+            print ('----you  won-----')
+        elif len(y) == 3:
+            print ('----you lost------')
+        else:
+            print ('-----it"s an draw-----')
+
+    elif 3 < x <= 9:
+        print ('scissor ')
+
+        if len(y) == 1:
+            print ('----you  won-----')
+        elif len(y) == 2:
+            print ('----you lost ------')
+        else:
+            print ('-----it"s an draw-----')
+    else:
+        print ('paper ')
+
+        if len(y) == 3:
+            print ('----you  won-----')
+        elif len(y) == 1:
+            print ('----you lost------')
+        else:
+            print ('-----it"s an draw-----')
+
+
+rpc()
+
+
+print(x)
