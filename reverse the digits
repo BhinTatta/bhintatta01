@@ -1,0 +1,36 @@
+digit = []
+digitu = []
+digitu10 = []
+
+x = int(input('number daal ulta krne ke liye = '))
+def palind(x):
+    l = len(str(x))
+    for i in range(l):
+        d = x%(10**(i+1))
+        digit.append(d)
+        x = x - d
+        
+    for i in range(len(digit)):
+        d1 = digit[i]/(10**i)
+        digitu.append(d1)
+        
+    lu = len(digitu)
+    
+    for i in range (lu):
+        d2 = digitu[i]*(10**(lu-i-1))
+        digitu10.append(d2)
+      
+        
+ palind(x)
+
+'''print(digit)
+print(digitu)
+print(digitu10)'''
+
+print('le bhai number hai = ' ,int(sum(digitu10)))
+
+    
+
+        
+        
+        
