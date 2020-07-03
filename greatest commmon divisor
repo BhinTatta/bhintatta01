@@ -1,0 +1,12 @@
+'''find the greatest common divisor'''
+def gcd(a,b):
+    if b == 0:
+        gcdab = a
+        return gcdab
+    else:
+        r = a%b
+        gcdab = gcd(b,r)
+        return gcdab
+        
+        
+gcd(51 , 19)    
