@@ -1,0 +1,16 @@
+text = str(input('enter the text file = '))
+text_ascii = []  #stores the ascii of text input
+for e in text:
+    text_ascii.append(ord(e))
+    
+print(text_ascii) 
+
+pswrd = int(input('enter four digit password = '))
+a = pswrd%10
+b = pswrd%(pswrd%100)
+text_ascii2 = []  #stores manipulated ascii code
+for i in range(len(text_ascii)):
+    x = (text_ascii[i]**a) + b
+    text_ascii2.append(x)
+    
+print(text_ascii2)  
