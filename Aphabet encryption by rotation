@@ -1,0 +1,19 @@
+def cs(x , n):
+    s = str(x.lower())
+    empty = ''
+    for i in s:
+            if i == ' ':
+                 new = empty + ' '
+                 empty = new
+            else:
+                 y = (ord(i)-97) + n
+                 y1 = chr((y%26) + 97)
+                 new = empty + str(y1)
+                 empty = new
+                 
+    print(empty)
+      
+x = str(input(' enter the string you want to decode = '))   
+n = int(input('enter the decoding number = '))
+
+cs(x,n)
